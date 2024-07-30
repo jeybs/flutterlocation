@@ -170,11 +170,11 @@ class FlutterLocationService : Service(), PluginRegistry.RequestPermissionsResul
         Log.d(TAG, "Creating service.")
 
         location = FlutterLocation(applicationContext, null)
-        backgroundNotification = BackgroundNotification(
-            applicationContext,
-            CHANNEL_ID,
-            ONGOING_NOTIFICATION_ID
-        )
+//        backgroundNotification = BackgroundNotification(
+//            applicationContext,
+//            CHANNEL_ID,
+//            ONGOING_NOTIFICATION_ID
+//        )
     }
 
     override fun onBind(intent: Intent?): IBinder {
@@ -238,8 +238,8 @@ class FlutterLocationService : Service(), PluginRegistry.RequestPermissionsResul
         } else {
             Log.d(TAG, "Start service in foreground mode.")
 
-            val notification = backgroundNotification!!.build()
-            startForeground(ONGOING_NOTIFICATION_ID, notification)
+//            val notification = backgroundNotification!!.build()
+//            startForeground(ONGOING_NOTIFICATION_ID, notification)
 
             isForeground = true
         }
